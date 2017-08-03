@@ -7,6 +7,7 @@
 
     <TableRow>
         <TextView
+            android:id="@+id/tvNoSoalan"
             android:text="1"
             android:padding="10dp"
             android:gravity="center"
@@ -15,6 +16,7 @@
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@+id/tvSoalan"
             android:text="soalansoalansoalansoalansoalansoalansoalansoacscsdcdscsdclansoalan"
             android:padding="10dp"
             android:gravity="center_vertical"
