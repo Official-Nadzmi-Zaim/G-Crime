@@ -1,7 +1,9 @@
-package com.g_crime;
+package com.g_crime.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.g_crime.R;
 
 public class MainActivity extends AppCompatActivity {
 
