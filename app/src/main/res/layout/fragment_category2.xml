@@ -1,108 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableRow
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/lvCategory2_1"
-            android:scrollbars="vertical"
+        <TextView
+            android:text="@string/c2_1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/lvCategory2_2"
-            android:scrollbars="vertical"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/lvCategory2_3"
-            android:scrollbars="vertical"
+        <TextView
+            android:text="@string/c2_2"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ListView
-            android:id="@+id/lvCategory2_4"
-            android:scrollbars="vertical"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content"/>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/lvCategory2_5"
-            android:scrollbars="vertical"
+        <TextView
+            android:text="@string/c2_3"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/lvCategory2_6"
-            android:scrollbars="vertical"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content"/>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ListView
-            android:id="@+id/lvCategory2_7"
-            android:scrollbars="vertical"
+        <TextView
+            android:text="@string/c2_4"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/lvCategory2_8"
-            android:scrollbars="vertical"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content"/>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ListView
-            android:id="@+id/lvCategory2_9"
-            android:scrollbars="vertical"
+        <TextView
+            android:text="@string/c2_5"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarStyle="outsideInset"/>
-    </TableRow>
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/c2_6"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/c2_7"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/c2_8"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/c2_9"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan2_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
