@@ -1,7 +1,11 @@
 package com.g_crime.Adapter;
 
 
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +31,7 @@ public class SoalanAdapter extends RecyclerView.Adapter<SoalanAdapter.MyViewHold
         return new MyViewHolder(view);
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private TextView txtNoSoalan, txtSoalan;
         private Button btnSoalan;
@@ -38,6 +42,26 @@ public class SoalanAdapter extends RecyclerView.Adapter<SoalanAdapter.MyViewHold
             txtNoSoalan = (TextView) itemView.findViewById(R.id.txtNoSoalan);
             txtSoalan = (TextView) itemView.findViewById(R.id.txtSoalan);
             btnSoalan = (Button) itemView.findViewById(R.id.btnSoalan);
+
+            btnSoalan.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.btnSoalan:
+                    int color = ((ColorDrawable) v.getBackground()).getColor();
+
+                    if (color == Color.parseColor("#00FF00")) //Green
+                        v.setBackgroundColor(Color.parseColor("#FFFF00"));
+                    else if (color == Color.parseColor("#FFFF00")) //Yellow
+                        v.setBackgroundColor(Color.parseColor("#FFAA2A"));
+                    else if (color == Color.parseColor("#FFAA2A")) //Orange
+                        v.setBackgroundColor(Color.parseColor("#FF0000"));
+                    else //Red
+                        v.setBackgroundColor(Color.parseColor("#00FF00"));
+                    break;
+            }
         }
     }
 
@@ -48,7 +72,7 @@ public class SoalanAdapter extends RecyclerView.Adapter<SoalanAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.txtNoSoalan.setText("" + listNoSoalan[position]);
+        holder.txtNoSoalan.setText(String.valueOf(listNoSoalan[position]));
         holder.txtSoalan.setText(listSoalan[position]);
     }
 
