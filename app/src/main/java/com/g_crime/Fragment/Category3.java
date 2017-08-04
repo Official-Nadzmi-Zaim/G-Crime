@@ -9,11 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
-public class Category3 extends Fragment {
+public class Category3 extends Fragment implements View.OnClickListener{
 
     public Category3() {
     }
@@ -29,11 +30,15 @@ public class Category3 extends Fragment {
     private int[] listNoSoalan3_4 = new int[4];
 
     private RecyclerView rcSoalan3_1, rcSoalan3_2, rcSoalan3_3, rcSoalan3_4;
+    private Button btnBack, btnNext;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_category3, container, false);
+
+        btnBack = (Button) v.findViewById(R.id.btnBack3);
+        btnNext = (Button) v.findViewById(R.id.btnNext3);
 
         rcSoalan3_1 = (RecyclerView) v.findViewById(R.id.rcSoalan3_1);
         rcSoalan3_2 = (RecyclerView) v.findViewById(R.id.rcSoalan3_2);
@@ -73,7 +78,23 @@ public class Category3 extends Fragment {
         rcSoalan3_3.setAdapter(new SoalanAdapter(listNoSoalan3_3, listSoalan3_3));
         rcSoalan3_4.setAdapter(new SoalanAdapter(listNoSoalan3_4, listSoalan3_4));
 
+        btnBack.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
+
         return v;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.btnBack3:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category2()).commit();
+                break;
+            case R.id.btnNext3:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Result()).commit();
+                break;
+        }
     }
 
     @Override

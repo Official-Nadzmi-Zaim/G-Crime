@@ -9,11 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
-public class Category2 extends Fragment {
+public class Category2 extends Fragment implements View.OnClickListener {
 
     private String[] listSoalan2_1 = new String[3];
     private String[] listSoalan2_2 = new String[2];
@@ -37,6 +38,7 @@ public class Category2 extends Fragment {
 
     private RecyclerView rcSoalan2_1, rcSoalan2_2, rcSoalan2_3, rcSoalan2_4, rcSoalan2_5, rcSoalan2_6,
             rcSoalan2_7, rcSoalan2_8, rcSoalan2_9;
+    private Button btnBack, btnNext;
 
     public Category2() {
     }
@@ -45,6 +47,9 @@ public class Category2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_category2, container, false);
+
+        btnBack = (Button) v.findViewById(R.id.btnBack2);
+        btnNext = (Button) v.findViewById(R.id.btnNext2);
 
         rcSoalan2_1 = (RecyclerView) v.findViewById(R.id.rcSoalan2_1);
         rcSoalan2_2 = (RecyclerView) v.findViewById(R.id.rcSoalan2_2);
@@ -127,7 +132,23 @@ public class Category2 extends Fragment {
         rcSoalan2_8.setAdapter(new SoalanAdapter(listNoSoalan2_8, listSoalan2_8));
         rcSoalan2_9.setAdapter(new SoalanAdapter(listNoSoalan2_9, listSoalan2_9));
 
+        btnBack.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
+
         return v;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.btnBack2:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category1()).commit();
+                break;
+            case R.id.btnNext2:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category3()).commit();
+                break;
+        }
     }
 
     @Override
