@@ -12,6 +12,7 @@ import com.g_crime.R;
 public class Result extends Fragment {
     // views
 
+
     // vars
 
     @Nullable

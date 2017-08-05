@@ -60,4 +60,14 @@
     <string name="c3_2">Discrimination</string>
     <string name="c3_3">Spills</string>
     <string name="c3_4">Direct and indirect impacts on biodiversity</string>
+
+    <!-- result page -->
+    <string name="title_law">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
+    <string name="title_management">Poor Environmental Management &amp; Practices</string>
+    <string name="title_environment">Involvement against Environment Justice</string>
+    <string name="score_precentage">%</string>
+    <string name="title_score">G-CRIME SCORE</string>
+    <string name="title_total_score">TOTAL G-CRIME SCORE</string>
+    <string name="title_level">G-CRIME LEVEL</string>
+    <string name="link_frontpage">MAIN PAGE</string>
 </resources>
