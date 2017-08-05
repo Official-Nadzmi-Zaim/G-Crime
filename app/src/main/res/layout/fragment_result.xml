@@ -246,6 +246,7 @@
                 android:gravity="center" />
 
             <ImageView
+                android:id="@+id/ivLevel"
                 android:background="@color/green"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
