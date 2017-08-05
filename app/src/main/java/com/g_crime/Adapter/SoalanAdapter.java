@@ -1,7 +1,5 @@
 package com.g_crime.Adapter;
 
-
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.RecyclerView;
@@ -19,10 +17,17 @@ public class SoalanAdapter extends RecyclerView.Adapter<SoalanAdapter.MyViewHold
 
     private String[] listSoalan;
     private int[] listNoSoalan;
+    private int[] listColor;
 
     public SoalanAdapter(int[] listNoSoalan, String[] listSoalan) {
         this.listNoSoalan = listNoSoalan;
         this.listSoalan = listSoalan;
+    }
+
+    public SoalanAdapter(int[] listNoSoalan, String[] listSoalan, int[] listColor) {
+        this.listSoalan = listSoalan;
+        this.listNoSoalan = listNoSoalan;
+        this.listColor = listColor;
     }
 
     @Override
@@ -48,18 +53,33 @@ public class SoalanAdapter extends RecyclerView.Adapter<SoalanAdapter.MyViewHold
 
         @Override
         public void onClick(View v) {
+
             switch (v.getId()){
                 case R.id.btnSoalan:
+                    int i = getAdapterPosition();
+
                     int color = ((ColorDrawable) v.getBackground()).getColor();
 
                     if (color == Color.parseColor("#00FF00")) //Green
-                        v.setBackgroundColor(Color.parseColor("#FFFF00"));
+                    {
+                        v.setBackgroundResource(R.color.yellow);
+                        listColor[i] = 2;
+                    }
                     else if (color == Color.parseColor("#FFFF00")) //Yellow
-                        v.setBackgroundColor(Color.parseColor("#FFAA2A"));
+                    {
+                        v.setBackgroundResource(R.color.orange);
+                        listColor[i] = 3;
+                    }
                     else if (color == Color.parseColor("#FFAA2A")) //Orange
-                        v.setBackgroundColor(Color.parseColor("#FF0000"));
+                    {
+                        v.setBackgroundResource(R.color.red);
+                        listColor[i] = 4;
+                    }
                     else //Red
-                        v.setBackgroundColor(Color.parseColor("#00FF00"));
+                    {
+                        v.setBackgroundResource(R.color.green);
+                        listColor[i] = 1;
+                    }
                     break;
             }
         }
@@ -74,6 +94,15 @@ public class SoalanAdapter extends RecyclerView.Adapter<SoalanAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.txtNoSoalan.setText(String.valueOf(listNoSoalan[position]));
         holder.txtSoalan.setText(listSoalan[position]);
+
+        if (listColor[position] == 1)
+            holder.btnSoalan.setBackgroundResource(R.color.green);
+        else if (listColor[position] == 2)
+            holder.btnSoalan.setBackgroundResource(R.color.yellow);
+        else if (listColor[position] == 3)
+            holder.btnSoalan.setBackgroundResource(R.color.orange);
+        else if (listColor[position] == 4)
+            holder.btnSoalan.setBackgroundResource(R.color.red);
     }
 
     @Override
