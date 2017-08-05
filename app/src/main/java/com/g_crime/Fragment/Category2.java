@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,13 +37,21 @@ public class Category2 extends Fragment implements View.OnClickListener {
     private int[] listNoSoalan2_8 = new int[2];
     private int[] listNoSoalan2_9 = new int[2];
 
+    private int[] listColor2_1 = {1, 1, 1};
+    private int[] listColor2_2 = {1, 1};
+    private int[] listColor2_3 = {1};
+    private int[] listColor2_4 = {1, 1};
+    private int[] listColor2_5 = {1, 1, 1};
+    private int[] listColor2_6 = {1, 1};
+    private int[] listColor2_7 = {1};
+    private int[] listColor2_8 = {1, 1};
+    private int[] listColor2_9 = {1, 1};
 
     private RecyclerView rcSoalan2_1, rcSoalan2_2, rcSoalan2_3, rcSoalan2_4, rcSoalan2_5, rcSoalan2_6,
             rcSoalan2_7, rcSoalan2_8, rcSoalan2_9;
     private Button btnBack, btnNext;
 
     public Category2() {
-        //setup color
     }
 
     @Nullable
@@ -63,21 +72,10 @@ public class Category2 extends Fragment implements View.OnClickListener {
         rcSoalan2_8 = (RecyclerView) v.findViewById(R.id.rcSoalan2_8);
         rcSoalan2_9 = (RecyclerView) v.findViewById(R.id.rcSoalan2_9);
 
-
-        int[] color_1 = {1, 1, 1};
-        int[] color_2 = {1, 1};
-        int[] color_3 = {1};
-        int[] color_4 = {1, 1};
-        int[] color_5 = {1, 1, 1};
-        int[] color_6 = {1, 1};
-        int[] color_7 = {1};
-        int[] color_8 = {1, 1};
-        int[] color_9 = {1, 1};
-
-        /*
         Bundle b = this.getArguments();
 
-        if (b != null){
+        if (b.getIntArray("listColor2_1") != null){
+            Log.d("Bundle2", "Ada");
             listColor2_1 = b.getIntArray("listColor2_1");
             listColor2_2 = b.getIntArray("listColor2_2");
             listColor2_3 = b.getIntArray("listColor2_3");
@@ -87,8 +85,7 @@ public class Category2 extends Fragment implements View.OnClickListener {
             listColor2_7 = b.getIntArray("listColor2_7");
             listColor2_8 = b.getIntArray("listColor2_8");
             listColor2_9 = b.getIntArray("listColor2_9");
-        }*/
-
+        }
 
         //Setup no soalan
         listNoSoalan2_1[0] = 20;
@@ -151,15 +148,15 @@ public class Category2 extends Fragment implements View.OnClickListener {
         rcSoalan2_9.setLayoutManager(new LinearLayoutManager(getActivity()));
         rcSoalan2_9.setItemAnimator(new DefaultItemAnimator());
 
-        rcSoalan2_1.setAdapter(new SoalanAdapter(listNoSoalan2_1, listSoalan2_1, color_1));
-        rcSoalan2_2.setAdapter(new SoalanAdapter(listNoSoalan2_2, listSoalan2_2, color_2));
-        rcSoalan2_3.setAdapter(new SoalanAdapter(listNoSoalan2_3, listSoalan2_3, color_3));
-        rcSoalan2_4.setAdapter(new SoalanAdapter(listNoSoalan2_4, listSoalan2_4, color_4));
-        rcSoalan2_5.setAdapter(new SoalanAdapter(listNoSoalan2_5, listSoalan2_5, color_5));
-        rcSoalan2_6.setAdapter(new SoalanAdapter(listNoSoalan2_6, listSoalan2_6, color_6));
-        rcSoalan2_7.setAdapter(new SoalanAdapter(listNoSoalan2_7, listSoalan2_7, color_7));
-        rcSoalan2_8.setAdapter(new SoalanAdapter(listNoSoalan2_8, listSoalan2_8, color_8));
-        rcSoalan2_9.setAdapter(new SoalanAdapter(listNoSoalan2_9, listSoalan2_9, color_9));
+        rcSoalan2_1.setAdapter(new SoalanAdapter(listNoSoalan2_1, listSoalan2_1, listColor2_1));
+        rcSoalan2_2.setAdapter(new SoalanAdapter(listNoSoalan2_2, listSoalan2_2, listColor2_2));
+        rcSoalan2_3.setAdapter(new SoalanAdapter(listNoSoalan2_3, listSoalan2_3, listColor2_3));
+        rcSoalan2_4.setAdapter(new SoalanAdapter(listNoSoalan2_4, listSoalan2_4, listColor2_4));
+        rcSoalan2_5.setAdapter(new SoalanAdapter(listNoSoalan2_5, listSoalan2_5, listColor2_5));
+        rcSoalan2_6.setAdapter(new SoalanAdapter(listNoSoalan2_6, listSoalan2_6, listColor2_6));
+        rcSoalan2_7.setAdapter(new SoalanAdapter(listNoSoalan2_7, listSoalan2_7, listColor2_7));
+        rcSoalan2_8.setAdapter(new SoalanAdapter(listNoSoalan2_8, listSoalan2_8, listColor2_8));
+        rcSoalan2_9.setAdapter(new SoalanAdapter(listNoSoalan2_9, listSoalan2_9, listColor2_9));
 
         btnBack.setOnClickListener(this);
         btnNext.setOnClickListener(this);
@@ -174,7 +171,8 @@ public class Category2 extends Fragment implements View.OnClickListener {
 
         Bundle b = new Bundle();
         b.putIntArray("listColor1_1", a.getIntArray("listColor1_1"));
-        /*b.putIntArray("listColor2_1", listColor2_1);
+
+        b.putIntArray("listColor2_1", listColor2_1);
         b.putIntArray("listColor2_2", listColor2_2);
         b.putIntArray("listColor2_3", listColor2_3);
         b.putIntArray("listColor2_4", listColor2_4);
@@ -182,17 +180,23 @@ public class Category2 extends Fragment implements View.OnClickListener {
         b.putIntArray("listColor2_6", listColor2_6);
         b.putIntArray("listColor2_7", listColor2_7);
         b.putIntArray("listColor2_8", listColor2_8);
-        b.putIntArray("listColor2_9", listColor2_9);*/
+        b.putIntArray("listColor2_9", listColor2_9);
+
+        b.putIntArray("listColor3_1", a.getIntArray("listColor3_1"));
+        b.putIntArray("listColor3_2", a.getIntArray("listColor3_2"));
+        b.putIntArray("listColor3_3", a.getIntArray("listColor3_3"));
+        b.putIntArray("listColor3_4", a.getIntArray("listColor3_4"));
 
         switch (v.getId()){
             case R.id.btnBack2:
-
                 Category1 c1 = new Category1();
                 c1.setArguments(b);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c1).commit();
                 break;
             case R.id.btnNext2:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category3()).commit();
+                Category3 c3 = new Category3();
+                c3.setArguments(b);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c3).commit();
                 break;
         }
     }
@@ -201,5 +205,11 @@ public class Category2 extends Fragment implements View.OnClickListener {
     public void onDestroyView() {
         super.onDestroyView();
         //Save dalam bundle untuk calculation
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("Save", "Saving bundle yawwww");
     }
 }
