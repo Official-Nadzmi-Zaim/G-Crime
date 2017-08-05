@@ -11,6 +11,8 @@ import com.g_crime.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int sumCategory1, sumCategory2, sumCategory3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

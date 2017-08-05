@@ -110,7 +110,6 @@ public class Category1 extends Fragment implements View.OnClickListener{
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //Save dalam bundle untuk calculation
-
+        //Calculate kat sini
     }
 }
