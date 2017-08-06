@@ -15,6 +15,8 @@ import android.widget.Button;
 import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
+import static com.g_crime.Activity.MainActivity.sumCategory1;
+
 public class Category1 extends Fragment implements View.OnClickListener{
 
     private String[] listSoalan1_1 = new String[19];
@@ -110,6 +112,37 @@ public class Category1 extends Fragment implements View.OnClickListener{
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //Calculate kat sini
+
+        // Save dalam bundle untuk calculation
+        // kira result ikut color & simpan dlm static var sumCategory3
+        /* Id utk setiap color:
+         * green = 1
+         * yellow = 2
+         * orange = 3
+         * red = 4
+         */
+        /* markah utk setiap color
+         * green = 0
+         * yellow = 10
+         * orange = 20
+         * red = 30
+         */
+
+        // soalan 1.1
+        for (int score : listColor1_1)
+            switch (score) {
+                case 1:
+                    sumCategory1 += 0;
+                    break;
+                case 2:
+                    sumCategory1 += 10;
+                    break;
+                case 3:
+                    sumCategory1 += 20;
+                    break;
+                case 4:
+                    sumCategory1 += 30;
+                    break;
+            }
     }
 }

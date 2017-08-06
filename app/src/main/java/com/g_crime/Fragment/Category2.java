@@ -15,6 +15,8 @@ import android.widget.Button;
 import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
+import static com.g_crime.Activity.MainActivity.sumCategory2;
+
 public class Category2 extends Fragment implements View.OnClickListener {
 
     private String[] listSoalan2_1 = new String[3];
@@ -204,7 +206,166 @@ public class Category2 extends Fragment implements View.OnClickListener {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //Save dalam bundle untuk calculation
+
+        // Save dalam bundle untuk calculation
+        // kira result ikut color & simpan dlm static var sumCategory3
+        /* Id utk setiap color:
+         * green = 1
+         * yellow = 2
+         * orange = 3
+         * red = 4
+         */
+        /* markah utk setiap color
+         * green = 0
+         * yellow = 10
+         * orange = 20
+         * red = 30
+         */
+
+        // soalan 2.1
+        for (int score : listColor2_1)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.2
+        for (int score : listColor2_2)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.3
+        for (int score : listColor2_3)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.4
+        for (int score : listColor2_4)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.5
+        for (int score : listColor2_5)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.6
+        for (int score : listColor2_6)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.7
+        for (int score : listColor2_7)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.8
+        for (int score : listColor2_8)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
+        // soalan 2.9
+        for (int score : listColor2_9)
+            switch (score) {
+                case 1:
+                    sumCategory2 += 0;
+                    break;
+                case 2:
+                    sumCategory2 += 10;
+                    break;
+                case 3:
+                    sumCategory2 += 20;
+                    break;
+                case 4:
+                    sumCategory2 += 30;
+                    break;
+            }
     }
 
     @Override
