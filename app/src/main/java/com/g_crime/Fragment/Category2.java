@@ -222,6 +222,8 @@ public class Category2 extends Fragment implements View.OnClickListener {
          * red = 30
          */
 
+        sumCategory2 = 0;
+
         // soalan 2.1
         for (int score : listColor2_1)
             switch (score) {

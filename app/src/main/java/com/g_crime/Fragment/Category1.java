@@ -128,6 +128,8 @@ public class Category1 extends Fragment implements View.OnClickListener{
          * red = 30
          */
 
+        sumCategory1 = 0;
+
         // soalan 1.1
         for (int score : listColor1_1)
             switch (score) {

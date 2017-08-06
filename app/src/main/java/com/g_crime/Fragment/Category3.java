@@ -157,6 +157,7 @@ public class Category3 extends Fragment implements View.OnClickListener{
          * orange = 20
          * red = 30
          */
+        sumCategory3 = 0;
 
         // soalan 3.1
         for (int score : listColor3_1)
