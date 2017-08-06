@@ -132,7 +132,9 @@ public class Category3 extends Fragment implements View.OnClickListener{
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c2).commit();
                 break;
             case R.id.btnNext3:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Result()).commit();
+                Result result = new Result();
+                result.setArguments(b);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, result).commit();
                 break;
         }
     }
