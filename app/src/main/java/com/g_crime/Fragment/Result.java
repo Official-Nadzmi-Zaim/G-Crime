@@ -22,7 +22,7 @@ public class Result extends Fragment implements View.OnClickListener {
     Button btnFrontPage;
 
     // vars
-    int scoreLaw, scoreManagement, scoreEnvironment, totalScore;
+    int scoreLaw, scoreManagement, scoreEnvironment, totalScore, level;
 
     @Nullable
     @Override
@@ -31,6 +31,7 @@ public class Result extends Fragment implements View.OnClickListener {
 
         initViews();
         initListener();
+        mainProcess();
 
         return v;
     }
@@ -61,14 +62,33 @@ public class Result extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ibLaw:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category1()).commit();
                 break;
             case R.id.ibManagement:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category2()).commit();
                 break;
             case R.id.ibEnvironment:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category3()).commit();
                 break;
             case R.id.btnFrontPage:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new FrontPage()).commit();
                 break;
         }
+    }
+    // ---------------------------------------------------------------------------------------------
+
+    // process -------------------------------------------------------------------------------------
+    private void mainProcess() {
+        // calculate score & total score
+
+        // show score
+        tvScoreLaw.setText(String.valueOf(scoreLaw));
+        tvScoreManagement.setText(String.valueOf(scoreManagement));
+        tvScoreEnvironment.setText(String.valueOf(scoreEnvironment));
+        tvTotalScore.setText(String.valueOf(totalScore));
+
+        // show level
+        // ivLevel.setBackgroundColor();
     }
     // ---------------------------------------------------------------------------------------------
 }
