@@ -71,4 +71,13 @@
     <string name="title_total_score">TOTAL G-CRIME SCORE</string>
     <string name="title_level">G-CRIME LEVEL</string>
     <string name="link_frontpage">MAIN PAGE</string>
+    <string name="g_crime">G-CRIME</string>
+    <string name="green_crime_detector">GREEN CRIME DETECTOR</string>
+    <string name="start">Start</string>
+
+    <string name="gDescription1">Green crime detector is a self-check tool developed to assess green criminology of organisations. This tool aims to offer an indicator of situations involving environmental crime. </string>
+    <string name="gDescription2">This application is to provide a comprehensive self-assessment system on green crime. It also offer a recommendation report that will re-align future environmental practices in accordance with best practices.</string>
+    <string name="gDescription3">The result of the green crime assessment will enable organisations:</string>
+    <string name="gDescription4">1. To determine the level of practices of organisations on environmental related issues.</string>
+    <string name="gDescription5">2. To enhance, align and improve their environmental management and practices</string>
 </resources>
