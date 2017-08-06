@@ -63,6 +63,7 @@
     <string name="c3_4">Direct and indirect impacts on biodiversity</string>
 
     <!-- result page -->
+    <string name="topic_result">Result</string>
     <string name="title_law">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
     <string name="title_management">Poor Environmental Management &amp; Practices</string>
     <string name="title_environment">Involvement against Environment Justice</string>

@@ -66,15 +66,44 @@ public class Result extends Fragment implements View.OnClickListener {
     // listener ------------------------------------------------------------------------------------
     @Override
     public void onClick(View v) {
+        Bundle a = this.getArguments();
+        Bundle b = new Bundle();
+
+        b.putIntArray("listColor1_1", a.getIntArray("listColor1_1"));
+
+        b.putIntArray("listColor2_1", a.getIntArray("listColor2_1"));
+        b.putIntArray("listColor2_2", a.getIntArray("listColor2_2"));
+        b.putIntArray("listColor2_3", a.getIntArray("listColor2_3"));
+        b.putIntArray("listColor2_4", a.getIntArray("listColor2_4"));
+        b.putIntArray("listColor2_5", a.getIntArray("listColor2_5"));
+        b.putIntArray("listColor2_6", a.getIntArray("listColor2_6"));
+        b.putIntArray("listColor2_7", a.getIntArray("listColor2_7"));
+        b.putIntArray("listColor2_8", a.getIntArray("listColor2_8"));
+        b.putIntArray("listColor2_9", a.getIntArray("listColor2_9"));
+
+        b.putIntArray("listColor3_1", a.getIntArray("listColor3_1"));
+        b.putIntArray("listColor3_2", a.getIntArray("listColor3_2"));
+        b.putIntArray("listColor3_3", a.getIntArray("listColor3_3"));
+        b.putIntArray("listColor3_4", a.getIntArray("listColor3_4"));
+
         switch (v.getId()) {
             case R.id.ibLaw:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category1()).commit();
+                Category1 c1 = new Category1();
+                c1.setArguments(b);
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c1).commit();
                 break;
             case R.id.ibManagement:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category2()).commit();
+                Category2 c2 = new Category2();
+                c2.setArguments(b);
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c2).commit();
                 break;
             case R.id.ibEnvironment:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Category3()).commit();
+                Category3 c3 = new Category3();
+                c3.setArguments(b);
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c3).commit();
                 break;
             case R.id.btnFrontPage:
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new FrontPage()).commit();
