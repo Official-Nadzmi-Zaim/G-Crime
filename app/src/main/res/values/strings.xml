@@ -45,8 +45,9 @@
     <string name="cS43">Reduction of species </string>
     <string name="cS44">Habitat conversion </string>
     <string name="cS45">Changes in ecological processes outside the natural range of variation (such as salinity or changes in groundwater level)</string>
-    <string name="cTopic_1">Non-Compliance to Environmental Regulation (Law &amp; Policy)</string>
+    <string name="cTopic_1">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
     <string name="cTopic_2">Poor Environmental Management &amp; Practices</string>
+    <string name="cTopic_3">Involvement against Environment Justice</string>
     <string name="c2_1">Greenhouse gas (GHG) emission</string>
     <string name="c2_2">Drilling waste and disposal</string>
     <string name="c2_3">Spills</string>
