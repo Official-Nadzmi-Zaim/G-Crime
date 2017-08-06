@@ -1,6 +1,8 @@
 package com.g_crime.Fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +15,10 @@ import android.widget.TextView;
 
 import com.g_crime.R;
 
+import static com.g_crime.Activity.MainActivity.sumCategory1;
+import static com.g_crime.Activity.MainActivity.sumCategory2;
+import static com.g_crime.Activity.MainActivity.sumCategory3;
+
 public class Result extends Fragment implements View.OnClickListener {
     // views
     View v;
@@ -22,7 +28,7 @@ public class Result extends Fragment implements View.OnClickListener {
     Button btnFrontPage;
 
     // vars
-    int scoreLaw, scoreManagement, scoreEnvironment, totalScore, level;
+    int totalScore, level;
 
     @Nullable
     @Override
@@ -79,16 +85,27 @@ public class Result extends Fragment implements View.OnClickListener {
 
     // process -------------------------------------------------------------------------------------
     private void mainProcess() {
-        // calculate score & total score
+        // calc total score & determine level
+        totalScore = sumCategory1 + sumCategory2 + sumCategory3;
 
-        // show score
-        tvScoreLaw.setText(String.valueOf(scoreLaw));
-        tvScoreManagement.setText(String.valueOf(scoreManagement));
-        tvScoreEnvironment.setText(String.valueOf(scoreEnvironment));
+        if(totalScore == 0)
+            level = Color.GREEN; // green
+        else if(totalScore >= 1 && totalScore <= 449)
+            level = Color.YELLOW; // yellow
+        else if(totalScore >= 450 && totalScore <= 899)
+            level = Color.parseColor("#FFAA2A"); // orange
+        else
+            level = Color.RED; // red
+
+
+        // get & show score
+        tvScoreLaw.setText(String.valueOf(sumCategory1));
+        tvScoreManagement.setText(String.valueOf(sumCategory2));
+        tvScoreEnvironment.setText(String.valueOf(sumCategory3));
         tvTotalScore.setText(String.valueOf(totalScore));
 
         // show level
-        // ivLevel.setBackgroundColor();
+        ivLevel.setBackgroundColor(level);
     }
     // ---------------------------------------------------------------------------------------------
 }
