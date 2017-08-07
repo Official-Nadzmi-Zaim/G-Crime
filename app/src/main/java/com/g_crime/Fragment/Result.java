@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,22 +69,26 @@ public class Result extends Fragment implements View.OnClickListener {
         Bundle a = this.getArguments();
         Bundle b = new Bundle();
 
-        b.putIntArray("listColor1_1", a.getIntArray("listColor1_1"));
+        if (a == null)
+            Log.d("Bundle", "Null");
+        else {
+            b.putIntArray("listColor1_1", a.getIntArray("listColor1_1"));
 
-        b.putIntArray("listColor2_1", a.getIntArray("listColor2_1"));
-        b.putIntArray("listColor2_2", a.getIntArray("listColor2_2"));
-        b.putIntArray("listColor2_3", a.getIntArray("listColor2_3"));
-        b.putIntArray("listColor2_4", a.getIntArray("listColor2_4"));
-        b.putIntArray("listColor2_5", a.getIntArray("listColor2_5"));
-        b.putIntArray("listColor2_6", a.getIntArray("listColor2_6"));
-        b.putIntArray("listColor2_7", a.getIntArray("listColor2_7"));
-        b.putIntArray("listColor2_8", a.getIntArray("listColor2_8"));
-        b.putIntArray("listColor2_9", a.getIntArray("listColor2_9"));
+            b.putIntArray("listColor2_1", a.getIntArray("listColor2_1"));
+            b.putIntArray("listColor2_2", a.getIntArray("listColor2_2"));
+            b.putIntArray("listColor2_3", a.getIntArray("listColor2_3"));
+            b.putIntArray("listColor2_4", a.getIntArray("listColor2_4"));
+            b.putIntArray("listColor2_5", a.getIntArray("listColor2_5"));
+            b.putIntArray("listColor2_6", a.getIntArray("listColor2_6"));
+            b.putIntArray("listColor2_7", a.getIntArray("listColor2_7"));
+            b.putIntArray("listColor2_8", a.getIntArray("listColor2_8"));
+            b.putIntArray("listColor2_9", a.getIntArray("listColor2_9"));
 
-        b.putIntArray("listColor3_1", a.getIntArray("listColor3_1"));
-        b.putIntArray("listColor3_2", a.getIntArray("listColor3_2"));
-        b.putIntArray("listColor3_3", a.getIntArray("listColor3_3"));
-        b.putIntArray("listColor3_4", a.getIntArray("listColor3_4"));
+            b.putIntArray("listColor3_1", a.getIntArray("listColor3_1"));
+            b.putIntArray("listColor3_2", a.getIntArray("listColor3_2"));
+            b.putIntArray("listColor3_3", a.getIntArray("listColor3_3"));
+            b.putIntArray("listColor3_4", a.getIntArray("listColor3_4"));
+        }
 
         switch (v.getId()) {
             case R.id.ibLaw:
