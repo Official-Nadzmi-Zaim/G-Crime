@@ -9,12 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.g_crime.R;
 
-import at.markushi.ui.CircleButton;
 
 import static com.g_crime.Activity.MainActivity.sumCategory1;
 import static com.g_crime.Activity.MainActivity.sumCategory2;
@@ -23,7 +23,7 @@ import static com.g_crime.Activity.MainActivity.sumCategory3;
 public class Result extends Fragment implements View.OnClickListener {
     // views
     View v;
-    CircleButton ibLaw, ibManagement, ibEnvironment;
+    ImageButton ibLaw, ibManagement, ibEnvironment;
     TextView tvScoreLaw, tvScoreManagement, tvScoreEnvironment, tvTotalScore;
     ImageView ivLevel, ivLevelLaw, ivLevelManagement, ivLevelEnvironment;
     Button btnFrontPage;
@@ -36,6 +36,11 @@ public class Result extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_result, container, false);
 
+        //clear backstack fragment if exist leaving the front page only
+        for (int i=1; i<getActivity().getSupportFragmentManager().getBackStackEntryCount(); i++){
+            getActivity().getSupportFragmentManager().popBackStack();
+        }
+
         initViews();
         initListener();
         mainProcess();
@@ -45,9 +50,9 @@ public class Result extends Fragment implements View.OnClickListener {
 
     // initialization ------------------------------------------------------------------------------
     private void initViews() {
-        ibLaw = (CircleButton) v.findViewById(R.id.ibLaw);
-        ibManagement = (CircleButton) v.findViewById(R.id.ibManagement);
-        ibEnvironment = (CircleButton) v.findViewById(R.id.ibEnvironment);
+        ibLaw = (ImageButton) v.findViewById(R.id.ibLaw);
+        ibManagement = (ImageButton) v.findViewById(R.id.ibManagement);
+        ibEnvironment = (ImageButton) v.findViewById(R.id.ibEnvironment);
         tvScoreLaw = (TextView) v.findViewById(R.id.tvScoreLaw);
         tvScoreManagement = (TextView) v.findViewById(R.id.tvScoreManagement);
         tvScoreEnvironment = (TextView) v.findViewById(R.id.tvScoreEnvironment);

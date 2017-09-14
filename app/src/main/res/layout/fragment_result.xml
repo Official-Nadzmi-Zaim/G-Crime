@@ -35,13 +35,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <at.markushi.ui.CircleButton
+            <ImageButton
                 android:layout_gravity="center"
                 android:id="@+id/ibLaw"
-                android:src="@drawable/law"
+                android:background="@drawable/law"
                 android:layout_width="90dp"
-                android:layout_height="90dp"
-                app:cb_pressedRingWidth="4dp"/>
+                android:layout_height="90dp"/>
 
             <LinearLayout
                 android:orientation="vertical"
@@ -127,13 +126,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <at.markushi.ui.CircleButton
+            <ImageButton
                 android:layout_gravity="center"
                 android:id="@+id/ibManagement"
-                android:src="@drawable/management"
+                android:background="@drawable/management"
                 android:layout_width="90dp"
-                android:layout_height="90dp"
-                app:cb_pressedRingWidth="4dp"/>
+                android:layout_height="90dp" />
 
 
             <LinearLayout
@@ -224,13 +222,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <at.markushi.ui.CircleButton
+            <ImageButton
                 android:layout_gravity="center"
                 android:id="@+id/ibEnvironment"
-                android:src="@drawable/environment"
+                android:background="@drawable/environment"
                 android:layout_width="90dp"
-                android:layout_height="90dp"
-                app:cb_pressedRingWidth="4dp"/>
+                android:layout_height="90dp" />
 
             <LinearLayout
                 android:orientation="vertical"
