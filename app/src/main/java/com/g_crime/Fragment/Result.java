@@ -9,11 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.g_crime.R;
+
+import at.markushi.ui.CircleButton;
 
 import static com.g_crime.Activity.MainActivity.sumCategory1;
 import static com.g_crime.Activity.MainActivity.sumCategory2;
@@ -22,9 +23,9 @@ import static com.g_crime.Activity.MainActivity.sumCategory3;
 public class Result extends Fragment implements View.OnClickListener {
     // views
     View v;
-    ImageButton ibLaw, ibManagement, ibEnvironment;
+    CircleButton ibLaw, ibManagement, ibEnvironment;
     TextView tvScoreLaw, tvScoreManagement, tvScoreEnvironment, tvTotalScore;
-    ImageView ivLevel;
+    ImageView ivLevel, ivLevelLaw, ivLevelManagement, ivLevelEnvironment;
     Button btnFrontPage;
 
     // vars
@@ -44,15 +45,18 @@ public class Result extends Fragment implements View.OnClickListener {
 
     // initialization ------------------------------------------------------------------------------
     private void initViews() {
-        ibLaw = (ImageButton) v.findViewById(R.id.ibLaw);
-        ibManagement = (ImageButton) v.findViewById(R.id.ibManagement);
-        ibEnvironment = (ImageButton) v.findViewById(R.id.ibEnvironment);
+        ibLaw = (CircleButton) v.findViewById(R.id.ibLaw);
+        ibManagement = (CircleButton) v.findViewById(R.id.ibManagement);
+        ibEnvironment = (CircleButton) v.findViewById(R.id.ibEnvironment);
         tvScoreLaw = (TextView) v.findViewById(R.id.tvScoreLaw);
         tvScoreManagement = (TextView) v.findViewById(R.id.tvScoreManagement);
         tvScoreEnvironment = (TextView) v.findViewById(R.id.tvScoreEnvironment);
         tvTotalScore = (TextView) v.findViewById(R.id.tvTotalScore);
         ivLevel = (ImageView) v.findViewById(R.id.ivLevel);
         btnFrontPage = (Button) v.findViewById(R.id.btnFrontPage);
+        ivLevelLaw = (ImageView) v.findViewById(R.id.ivLevelLaw);
+        ivLevelManagement = (ImageView) v.findViewById(R.id.ivLevelManagement);
+        ivLevelEnvironment = (ImageView) v.findViewById(R.id.ivLevelEnvironment);
     }
 
     private void initListener() {
@@ -94,23 +98,23 @@ public class Result extends Fragment implements View.OnClickListener {
             case R.id.ibLaw:
                 Category1 c1 = new Category1();
                 c1.setArguments(b);
-
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c1).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c1).addToBackStack(null).commit();
                 break;
             case R.id.ibManagement:
                 Category2 c2 = new Category2();
                 c2.setArguments(b);
 
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c2).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c2).addToBackStack(null).commit();
                 break;
             case R.id.ibEnvironment:
                 Category3 c3 = new Category3();
                 c3.setArguments(b);
 
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c3).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c3).addToBackStack(null).commit();
                 break;
             case R.id.btnFrontPage:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new FrontPage()).commit();
+                //Ini untuk ruangan analysis
+                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new FrontPage()).commit();
                 break;
         }
     }
@@ -119,6 +123,7 @@ public class Result extends Fragment implements View.OnClickListener {
     // process -------------------------------------------------------------------------------------
     private void mainProcess() {
         // calc total score & determine level
+        // value retrieved by each function after calculate
         totalScore = sumCategory1 + sumCategory2 + sumCategory3;
 
         if(totalScore == 0)

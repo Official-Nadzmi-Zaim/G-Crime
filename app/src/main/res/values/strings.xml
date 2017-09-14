@@ -64,7 +64,7 @@
 
     <!-- result page -->
     <string name="topic_result">Result</string>
-    <string name="title_law">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
+    <string name="title_law">Non-Compliance to Environmental Regulation (Law &amp; Policy)</string>
     <string name="title_management">Poor Environmental Management &amp; Practices</string>
     <string name="title_environment">Involvement against Environment Justice</string>
     <string name="score_precentage">%</string>
@@ -75,6 +75,7 @@
     <string name="g_crime">G-CRIME</string>
     <string name="green_crime_detector">GREEN CRIME DETECTOR</string>
     <string name="start">Start</string>
+    <string name="analysis">Analysis</string>
 
     <string name="gDescription1">Green crime detector is a self-check tool developed to assess green criminology of organisations. This tool aims to offer an indicator of situations involving environmental crime. </string>
     <string name="gDescription2">This application is to provide a comprehensive self-assessment system on green crime. It also offer a recommendation report that will re-align future environmental practices in accordance with best practices.</string>

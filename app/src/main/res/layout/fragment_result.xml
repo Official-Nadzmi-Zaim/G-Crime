@@ -1,277 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
+        android:text="@string/topic_result"
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center" />
 
-        <TextView
-            android:text="@string/topic_result"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/draw_category_title"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:gravity="center" />
+    <android.support.v7.widget.CardView
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
 
         <!-- individual score -->
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- law -->
+            <at.markushi.ui.CircleButton
+                android:layout_gravity="center"
+                android:id="@+id/ibLaw"
+                android:src="@drawable/law"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:cb_color="@color/buttonBg"
+                app:cb_pressedRingWidth="4dp"/>
+
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
 
-                <ImageButton
-                    android:id="@+id/ibLaw"
-                    android:background="@drawable/law"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="5dp"
+                <TextView
+                    android:id="@+id/tvTitleLaw"
+                    android:text="@string/title_law"
+                    android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/tvTitleLaw"
-                        android:text="@string/title_law"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="match_parent"
+                        android:text="@string/title_score"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/tvScoreLaw"
+                        android:text="100"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
 
-                        <TextView
-                            android:text="@string/title_score"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="15sp" />
-                        <TextView
-                            android:id="@+id/tvScoreLaw"
-                            android:text="100"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="@color/orange"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
-                        <TextView
-                            android:text="@string/score_precentage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textColor="@color/orange"
-                            android:textSize="20sp" />
-                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-
-            <!-- management -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageButton
-                    android:id="@+id/ibManagement"
-                    android:background="@drawable/management"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp" />
-
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/tvTitleManagement"
-                        android:text="@string/title_management"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="match_parent"
+                        android:text="@string/title_level"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal">
-
-                        <TextView
-                            android:text="@string/title_score"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="15sp" />
-                        <TextView
-                            android:id="@+id/tvScoreManagement"
-                            android:text="100"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="@color/orange"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
-                        <TextView
-                            android:text="@string/score_precentage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textColor="@color/orange"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- environment -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageButton
-                    android:id="@+id/ibEnvironment"
-                    android:background="@drawable/environment"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
-                    <TextView
-                        android:id="@+id/tvTitleEnvironment"
-                        android:text="@string/title_environment"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black" />
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal">
-
-                        <TextView
-                            android:text="@string/title_score"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="15sp" />
-                        <TextView
-                            android:id="@+id/tvScoreEnvironment"
-                            android:text="100"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="@color/orange"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
-                        <TextView
-                            android:text="@string/score_precentage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textColor="@color/orange"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/ivLevelLaw"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@color/green"
+                        />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
 
-        <!-- total score -->
+        <!-- management -->
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:text="@string/title_total_score"
+            <at.markushi.ui.CircleButton
+                android:layout_gravity="center"
+                android:id="@+id/ibManagement"
+                android:src="@drawable/management"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:cb_pressedRingWidth="4dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center" />
+                android:layout_gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/tvTotalScore"
-                android:text="310"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center" />
+                <TextView
+                    android:id="@+id/tvTitleManagement"
+                    android:text="@string/title_management"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/title_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvScoreManagement"
+                        android:text="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/title_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/ivLevelManagement"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@color/green"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
 
-        <!-- level -->
+        <!-- environment -->
         <LinearLayout
-            android:orientation="vertical"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <at.markushi.ui.CircleButton
+                android:layout_gravity="center"
+                android:id="@+id/ibEnvironment"
+                android:src="@drawable/environment"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:cb_pressedRingWidth="4dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleEnvironment"
+                    android:text="@string/title_environment"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/title_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvScoreEnvironment"
+                        android:text="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/title_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/ivLevelEnvironment"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@color/green"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <!-- total score -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:text="@string/title_total_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center" />
 
-            <TextView
-                android:text="@string/title_level"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center" />
-
-            <ImageView
-                android:id="@+id/ivLevel"
-                android:background="@color/green"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center" />
-        </LinearLayout>
-
-        <!-- frontpage button -->
-        <Button
-            android:id="@+id/btnFrontPage"
-            android:text="@string/link_frontpage"
-            android:padding="10dp"
-            android:layout_margin="10dp"
+        <TextView
+            android:id="@+id/tvTotalScore"
+            android:text="310"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center" />
     </LinearLayout>
-</ScrollView>
+
+    <!-- level -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:text="@string/title_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/ivLevel"
+            android:background="@color/green"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- frontpage button -->
+    <Button
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/green_dark"
+        android:id="@+id/btnFrontPage"
+        android:text="@string/analysis"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

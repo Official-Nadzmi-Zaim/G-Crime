@@ -19,12 +19,10 @@ public class FrontPage extends Fragment {
         View v = inflater.inflate(R.layout.fragment_front_page, container, false);
         Button btnStart = (Button) v.findViewById(R.id.btnStart);
 
-        //((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Result()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new Result()).addToBackStack(null).commit();
             }
         });
         return v;
