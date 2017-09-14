@@ -19,6 +19,19 @@ import static com.g_crime.Activity.MainActivity.sumCategory1;
 
 public class Category1 extends Fragment implements View.OnClickListener{
 
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_category1, container, false);
+        return v;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    /*
     private String[] listSoalan1_1 = new String[19];
     private int[] listNoSoalan1_1 = new int[19];
     private int[] listColor1_1 = new int[19];
@@ -127,7 +140,7 @@ public class Category1 extends Fragment implements View.OnClickListener{
          * orange = 20
          * red = 30
          */
-
+        /*
         sumCategory1 = 0;
 
         // soalan 1.1
@@ -146,5 +159,5 @@ public class Category1 extends Fragment implements View.OnClickListener{
                     sumCategory1 += 30;
                     break;
             }
-    }
+    }*/
 }

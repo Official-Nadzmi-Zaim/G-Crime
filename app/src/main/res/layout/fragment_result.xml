@@ -41,7 +41,6 @@
                 android:src="@drawable/law"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                app:cb_color="@color/buttonBg"
                 app:cb_pressedRingWidth="4dp"/>
 
             <LinearLayout
