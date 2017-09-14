@@ -13,5 +13,6 @@
     <color name="yellow">#FFFF00</color>
     <color name="orange">#FFAA2A</color>
     <color name="red">#FF0000</color>
+    <color name="buttonBg">#2d90fa</color>
     <color name="subtopic_bg">#0000AA</color>
 </resources>
