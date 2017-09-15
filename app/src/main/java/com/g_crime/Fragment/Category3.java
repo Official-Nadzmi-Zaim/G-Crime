@@ -15,6 +15,7 @@ import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
 import static com.g_crime.Activity.MainActivity.array_3;
+import static com.g_crime.Activity.MainActivity.cat3SecScores;
 import static com.g_crime.Activity.MainActivity.sumCategory3;
 
 public class Category3 extends Fragment implements View.OnClickListener{
@@ -103,97 +104,46 @@ public class Category3 extends Fragment implements View.OnClickListener{
 
         switch (v.getId()){
             case R.id.btnCalcC3:
+                // Perform calculation here
+                // Save dalam bundle untuk calculation
+                // kira result ikut color & simpan dlm static var sumCategory3
+                /* Id utk setiap color:
+                 * green = 1
+                 * yellow = 2
+                 * orange = 3
+                 * red = 4
+                 */
+                /* markah utk setiap color
+                 * green = 0
+                 * yellow = 10
+                 * orange = 20
+                 * red = 30
+                 */
+
+                for(int x=0 ; x<array_3.length ; x++)
+                    if(x >= 0 && x <= 1)
+                        cat3SecScores[0] += (array_3[x] - 1) * 10;
+                    else if(x == 2)
+                        cat3SecScores[1] += (array_3[x] - 1) * 10;
+                    else if(x == 3)
+                        cat3SecScores[2] += (array_3[x] - 1) * 10;
+                    else
+                        cat3SecScores[3] += (array_3[x] - 1) * 10;
+
                 getActivity().getSupportFragmentManager().popBackStack();
                 break;
         }
     }
 
 
-    /*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
 
-        // Save dalam bundle untuk calculation
-        // kira result ikut color & simpan dlm static var sumCategory3
-        /* Id utk setiap color:
-         * green = 1
-         * yellow = 2
-         * orange = 3
-         * red = 4
-         */
-        /* markah utk setiap color
-         * green = 0
-         * yellow = 10
-         * orange = 20
-         * red = 30
-         */
-        /*
+        // kira summation of this category
         sumCategory3 = 0;
 
-        // soalan 3.1
-        for (int score : listColor3_1)
-            switch (score) {
-                case 1:
-                    sumCategory3 += 0;
-                    break;
-                case 2:
-                    sumCategory3 += 10;
-                    break;
-                case 3:
-                    sumCategory3 += 20;
-                    break;
-                case 4:
-                    sumCategory3 += 30;
-                    break;
-            }
-        // soalan 3.2
-        for (int score : listColor3_2)
-            switch (score) {
-                case 1:
-                    sumCategory3 += 0;
-                    break;
-                case 2:
-                    sumCategory3 += 10;
-                    break;
-                case 3:
-                    sumCategory3 += 20;
-                    break;
-                case 4:
-                    sumCategory3 += 30;
-                    break;
-            }
-        // soalan 3.3
-        for (int score : listColor3_3)
-            switch (score) {
-                case 1:
-                    sumCategory3 += 0;
-                    break;
-                case 2:
-                    sumCategory3 += 10;
-                    break;
-                case 3:
-                    sumCategory3 += 20;
-                    break;
-                case 4:
-                    sumCategory3 += 30;
-                    break;
-            }
-        // soalan 3.4
-        for (int score : listColor3_4)
-            switch (score) {
-                case 1:
-                    sumCategory3 += 0;
-                    break;
-                case 2:
-                    sumCategory3 += 10;
-                    break;
-                case 3:
-                    sumCategory3 += 20;
-                    break;
-                case 4:
-                    sumCategory3 += 30;
-                    break;
-            }
-    }*/
+        for (int score : cat3SecScores)
+            sumCategory3 += score;
+    }
 }

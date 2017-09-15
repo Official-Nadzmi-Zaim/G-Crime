@@ -19,6 +19,9 @@ import com.g_crime.Activity.Analysis;
 import com.g_crime.R;
 
 
+import static com.g_crime.Activity.MainActivity.cat1SecScores;
+import static com.g_crime.Activity.MainActivity.cat2SecScores;
+import static com.g_crime.Activity.MainActivity.cat3SecScores;
 import static com.g_crime.Activity.MainActivity.sumCategory1;
 import static com.g_crime.Activity.MainActivity.sumCategory2;
 import static com.g_crime.Activity.MainActivity.sumCategory3;
@@ -125,9 +128,9 @@ public class Result extends Fragment implements View.OnClickListener {
                 int[] dataCat1, dataCat2, dataCat3;
 
                 // sample data
-                dataCat1 = new int[] {1, 3, 6, 4, 2, 2, 5};
-                dataCat2 = new int[] {4, 6, 2, 3, 5, 4, 2, 6, 7};
-                dataCat3 = new int[] {4, 6, 8, 3};
+                dataCat1 = cat1SecScores; // array of section in each category
+                dataCat2 = cat2SecScores;
+                dataCat3 = cat3SecScores;
 
                 startActivity(new Intent(getActivity(), Analysis.class)
                         .putExtra("dataCat1", dataCat1)

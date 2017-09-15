@@ -16,6 +16,7 @@ import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
 import static com.g_crime.Activity.MainActivity.array_2;
+import static com.g_crime.Activity.MainActivity.cat2SecScores;
 import static com.g_crime.Activity.MainActivity.sumCategory2;
 
 public class Category2 extends Fragment implements View.OnClickListener {
@@ -171,180 +172,57 @@ public class Category2 extends Fragment implements View.OnClickListener {
 
         switch (v.getId()){
             case R.id.btnCalcC2:
-                //Perform calculation here
+                // Perform calculation here
+                // Save dalam bundle untuk calculation
+                // kira result ikut color & simpan dlm static var sumCategory3
+                /* Id utk setiap color:
+                 * green = 1
+                 * yellow = 2
+                 * orange = 3
+                 * red = 4
+                 */
+                /* markah utk setiap color
+                 * green = 0
+                 * yellow = 10
+                 * orange = 20
+                 * red = 30
+                 */
+
+                for(int x=0 ; x<array_2.length ; x++)
+                    if(x >= 0 && x <= 2)
+                        cat2SecScores[0] += (array_2[x] - 1) * 10;
+                    else if(x >= 3 && x <= 4)
+                        cat2SecScores[1] += (array_2[x] - 1) * 10;
+                    else if(x == 5)
+                        cat2SecScores[2] += (array_2[x] - 1) * 10;
+                    else if(x >= 6 && x <= 7)
+                        cat2SecScores[3] += (array_2[x] - 1) * 10;
+                    else if(x >= 8 && x <= 10)
+                        cat2SecScores[4] += (array_2[x] - 1) * 10;
+                    else if(x >= 11 && x <= 12)
+                        cat2SecScores[5] += (array_2[x] - 1) * 10;
+                    else if(x == 13)
+                        cat2SecScores[6] += (array_2[x] - 1) * 10;
+                    else if(x >= 14 && x <= 15)
+                        cat2SecScores[7] += (array_2[x] - 1) * 10;
+                    else
+                        cat2SecScores[8] += (array_2[x] - 1) * 10;
+
                 getActivity().getSupportFragmentManager().popBackStack();
                 break;
         }
     }
 
-    //Part ni pun kena ubah sebab dah guna button calculate
-    /*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
 
-        // Save dalam bundle untuk calculation
-        // kira result ikut color & simpan dlm static var sumCategory3
-        /* Id utk setiap color:
-         * green = 1
-         * yellow = 2
-         * orange = 3
-         * red = 4
-         */
-        /* markah utk setiap color
-         * green = 0
-         * yellow = 10
-         * orange = 20
-         * red = 30
-         */
-        /*
+        // kira summation of this category
         sumCategory2 = 0;
 
-        // soalan 2.1
-        for (int score : listColor2_1)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.2
-        for (int score : listColor2_2)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.3
-        for (int score : listColor2_3)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.4
-        for (int score : listColor2_4)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.5
-        for (int score : listColor2_5)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.6
-        for (int score : listColor2_6)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.7
-        for (int score : listColor2_7)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.8
-        for (int score : listColor2_8)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-        // soalan 2.9
-        for (int score : listColor2_9)
-            switch (score) {
-                case 1:
-                    sumCategory2 += 0;
-                    break;
-                case 2:
-                    sumCategory2 += 10;
-                    break;
-                case 3:
-                    sumCategory2 += 20;
-                    break;
-                case 4:
-                    sumCategory2 += 30;
-                    break;
-            }
-    }*/
+        for (int score : cat2SecScores)
+            sumCategory2 += score;
+    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

@@ -15,6 +15,7 @@ import com.g_crime.Adapter.SoalanAdapter;
 import com.g_crime.R;
 
 import static com.g_crime.Activity.MainActivity.array_1;
+import static com.g_crime.Activity.MainActivity.cat1SecScores;
 import static com.g_crime.Activity.MainActivity.sumCategory1;
 
 public class Category1 extends Fragment implements View.OnClickListener{
@@ -60,50 +61,51 @@ public class Category1 extends Fragment implements View.OnClickListener{
 
         switch (v.getId()){
             case R.id.btnCalcC1:
-                //Perform calculation here
+                // Perform calculation here
+                // Save dalam bundle untuk calculation
+                // kira result ikut color & simpan dlm static var sumCategory3
+                /* Id utk setiap color:
+                 * green = 1
+                 * yellow = 2
+                 * orange = 3
+                 * red = 4
+                 */
+                /* markah utk setiap color
+                 * green = 0
+                 * yellow = 10
+                 * orange = 20
+                 * red = 30
+                 */
+
+                for(int x=0 ; x<array_1.length ; x++)
+                    if(x >= 0 && x <= 2)
+                        cat1SecScores[0] += (array_1[x] - 1) * 10; // kena tolak 1 sebab id utk setiap color bermula dgn 1(green), tapi markah utk setiap color bermula dgn 0(green)
+                    else if(x >= 3 && x <= 5)
+                        cat1SecScores[1] += (array_1[x] - 1) * 10;
+                    else if(x == 6)
+                        cat1SecScores[2] += (array_1[x] - 1) * 10;
+                    else if(x == 7)
+                        cat1SecScores[3] += (array_1[x] - 1) * 10;
+                    else if(x == 8)
+                        cat1SecScores[4] += (array_1[x] - 1) * 10;
+                    else if(x == 9)
+                        cat1SecScores[5] += (array_1[x] - 1) * 10;
+                    else
+                        cat1SecScores[6] += (array_1[x] - 1) * 10;
+
                 getActivity().getSupportFragmentManager().popBackStack();
                 break;
         }
     }
 
-    /*
-    //Part ni pun kena ubah sebab dah guna button calculate
     @Override
     public void onDestroyView() {
         super.onDestroyView();
 
-        // Save dalam bundle untuk calculation
-        // kira result ikut color & simpan dlm static var sumCategory3
-        /* Id utk setiap color:
-         * green = 1
-         * yellow = 2
-         * orange = 3
-         * red = 4
-         */
-        /* markah utk setiap color
-         * green = 0
-         * yellow = 10
-         * orange = 20
-         * red = 30
-         */
-        /*
+        // kira summation of this category
         sumCategory1 = 0;
 
-        // soalan 1.1
-        for (int score : listColor1_1)
-            switch (score) {
-                case 1:
-                    sumCategory1 += 0;
-                    break;
-                case 2:
-                    sumCategory1 += 10;
-                    break;
-                case 3:
-                    sumCategory1 += 20;
-                    break;
-                case 4:
-                    sumCategory1 += 30;
-                    break;
-            }
-    }*/
+        for (int score : cat1SecScores)
+            sumCategory1 += score;
+    }
 }

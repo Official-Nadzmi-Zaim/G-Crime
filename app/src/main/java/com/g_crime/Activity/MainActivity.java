@@ -12,6 +12,12 @@ import com.g_crime.R;
 public class MainActivity extends AppCompatActivity {
 
     public static int sumCategory1, sumCategory2, sumCategory3;
+
+    // score for each section in each category
+    public static int[] cat1SecScores = new int[7]; // category 1 section score
+    public static int[] cat2SecScores = new int[9]; // category 2 section score
+    public static int[] cat3SecScores = new int[4]; // category 3 section score
+
     //Buat 3 array untuk setiap category, untuk warna button, boleh kira score;
     public static int[] array_1 = new int[19];
     public static int[] array_2 = new int[18];
