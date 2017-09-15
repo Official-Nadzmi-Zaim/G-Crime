@@ -82,4 +82,33 @@
     <string name="gDescription3"><b>The result of the green crime assessment will enable organisations:</b></string>
     <string name="gDescription4">1. To determine the level of practices of organisations on environmental related issues.</string>
     <string name="gDescription5">2. To enhance, align and improve their environmental management and practices</string>
+
+    <!-- analysis fragment -->
+    <string name="btn_back">Back</string>
+    <string-array name="lbl_cat1">
+        <item>Licensing</item>
+        <item>Air<br />Pollution</item>
+        <item>Water\nPollution</item>
+        <item>Noise Pollution</item>
+        <item>Scheduled Waste</item>
+        <item>Environment Impact Assessment</item>
+        <item>Other Offences</item>
+    </string-array>
+    <string-array name="lbl_cat2">
+        <item>Greenhouse Gas (GHG) Emission</item>
+        <item>Drilling Waste and Disposal</item>
+        <item>Spills</item>
+        <item>Water Management</item>
+        <item>Consumption</item>
+        <item>Assessment</item>
+        <item>Stewardship</item>
+        <item>Material Sourcing and Management</item>
+        <item>Land</item>
+    </string-array>
+    <string-array name="lbl_cat3">
+        <item>Human Rights</item>
+        <item>Discrimination</item>
+        <item>Spills</item>
+        <item>Direct and Indirect impact on Biodiversity</item>
+    </string-array>
 </resources>

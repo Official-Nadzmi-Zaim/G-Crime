@@ -1,5 +1,6 @@
 package com.g_crime.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.g_crime.Activity.*;
+import com.g_crime.Activity.Analysis;
 import com.g_crime.R;
 
 
@@ -118,8 +121,8 @@ public class Result extends Fragment implements View.OnClickListener {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, c3).addToBackStack(null).commit();
                 break;
             case R.id.btnFrontPage:
-                //Ini untuk ruangan analysis
-                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new FrontPage()).commit();
+                // hantar data category dkt sini through bundle
+                startActivity(new Intent(getActivity(), Analysis.class));
                 break;
         }
     }
