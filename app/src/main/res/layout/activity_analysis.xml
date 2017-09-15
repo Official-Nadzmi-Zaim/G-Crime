@@ -10,34 +10,34 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:text="Category 1"
+            android:text="@string/title_law"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp" />
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bcCat1"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="300dp" />
 
         <TextView
-            android:text="Category 2"
+            android:text="@string/title_management"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp" />
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bcCat2"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="300dp" />
 
         <TextView
-            android:text="Category 3"
+            android:text="@string/title_environment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp" />
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bcCat3"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="300dp" />
 
         <Button
             android:id="@+id/btnBack"

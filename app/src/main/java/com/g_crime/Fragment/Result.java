@@ -122,7 +122,18 @@ public class Result extends Fragment implements View.OnClickListener {
                 break;
             case R.id.btnFrontPage:
                 // hantar data category dkt sini through bundle
-                startActivity(new Intent(getActivity(), Analysis.class));
+                int[] dataCat1, dataCat2, dataCat3;
+
+                // sample data
+                dataCat1 = new int[] {1, 3, 6, 4, 2, 2, 5};
+                dataCat2 = new int[] {4, 6, 2, 3, 5, 4, 2, 6, 7};
+                dataCat3 = new int[] {4, 6, 8, 3};
+
+                startActivity(new Intent(getActivity(), Analysis.class)
+                        .putExtra("dataCat1", dataCat1)
+                        .putExtra("dataCat2", dataCat2)
+                        .putExtra("dataCat3", dataCat3)
+                );
                 break;
         }
     }

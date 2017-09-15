@@ -87,9 +87,9 @@ public class Analysis extends AppCompatActivity implements View.OnClickListener 
         List<IBarDataSet> dataSetCat1, dataSetCat2, dataSetCat3;
 
         // initialize data from the categories
-        dataCat1 = new int[] {1, 3, 6, 4, 2, 2, 5};
-        dataCat2 = new int[] {4, 6, 2, 3, 5, 4, 2, 6, 7};
-        dataCat3 = new int[] {4, 6, 8, 3};
+        dataCat1 = getIntent().getIntArrayExtra("dataCat1");
+        dataCat2 = getIntent().getIntArrayExtra("dataCat2");
+        dataCat3 = getIntent().getIntArrayExtra("dataCat3");
 
         // get labels
         lblCat1 = getResources().getStringArray(R.array.lbl_cat1);
