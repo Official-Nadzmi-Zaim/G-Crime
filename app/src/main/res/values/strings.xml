@@ -48,6 +48,13 @@
     <string name="cTopic_1">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
     <string name="cTopic_2">Poor Environmental Management &amp; Practices</string>
     <string name="cTopic_3">Involvement against Environment Justice</string>
+    <string name="c1_1">Licensing</string>
+    <string name="c1_2">Air Pollution</string>
+    <string name="c1_3">Water Pollution</string>
+    <string name="c1_4">Noise Pollution</string>
+    <string name="c1_5">Scheduled Waste</string>
+    <string name="c1_6">Environment Impact Assessment</string>
+    <string name="c1_7">Other Offences</string>
     <string name="c2_1">Greenhouse gas (GHG) emission</string>
     <string name="c2_2">Drilling waste and disposal</string>
     <string name="c2_3">Spills</string>
