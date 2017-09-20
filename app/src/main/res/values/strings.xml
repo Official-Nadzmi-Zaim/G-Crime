@@ -45,9 +45,24 @@
     <string name="cS43">Reduction of species </string>
     <string name="cS44">Habitat conversion </string>
     <string name="cS45">Changes in ecological processes outside the natural range of variation (such as salinity or changes in groundwater level)</string>
+
+    <!-- actions -->
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_back">Back</string>
+
+    <!-- topics -->
     <string name="cTopic_1">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
     <string name="cTopic_2">Poor Environmental Management &amp; Practices</string>
     <string name="cTopic_3">Involvement against Environment Justice</string>
+
+    <!-- sub-topics -->
+    <string name="c1_1">Licensing</string>
+    <string name="c1_2">Air Pollution</string>
+    <string name="c1_3">Water Pollution</string>
+    <string name="c1_4">Noise Pollution</string>
+    <string name="c1_5">Scheduled Waste</string>
+    <string name="c1_6">Environment Impact Assessment</string>
+    <string name="c1_7">Other Offences</string>
     <string name="c2_1">Greenhouse gas (GHG) emission</string>
     <string name="c2_2">Drilling waste and disposal</string>
     <string name="c2_3">Spills</string>
@@ -64,7 +79,7 @@
 
     <!-- result page -->
     <string name="topic_result">Result</string>
-    <string name="title_law">Non-Compliance to Environmental Regulation (Law &amp; Policy)</string>
+    <string name="title_law">Non-Compliance to Environmental Regulation\n(Law &amp; Policy)</string>
     <string name="title_management">Poor Environmental Management &amp; Practices</string>
     <string name="title_environment">Involvement against Environment Justice</string>
     <string name="score_precentage">%</string>
@@ -84,10 +99,9 @@
     <string name="gDescription5">2. To enhance, align and improve their environmental management and practices</string>
 
     <!-- analysis fragment -->
-    <string name="btn_back">Back</string>
     <string-array name="lbl_cat1">
         <item>Licensing</item>
-        <item>Air<br />Pollution</item>
+        <item>Air Pollution</item>
         <item>Water\nPollution</item>
         <item>Noise Pollution</item>
         <item>Scheduled Waste</item>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="@string/cTopic_1"
@@ -15,19 +15,112 @@
             android:layout_height="wrap_content"
             android:background="@color/green_2"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:gravity="center" />
 
+        <!-- 1 -->
+        <TextView
+            android:text="@string/c1_1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rcSoalan1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 2 -->
+        <TextView
+            android:text="@string/c1_2"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan1_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 3 -->
+        <TextView
+            android:text="@string/c1_3"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan1_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 4 -->
+        <TextView
+            android:text="@string/c1_4"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan1_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 5 -->
+        <TextView
+            android:text="@string/c1_5"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan1_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 6 -->
+        <TextView
+            android:text="@string/c1_6"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan1_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 7 -->
+        <TextView
+            android:text="@string/c1_7"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:background="@color/subtopic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcSoalan1_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnCalcC1"
             android:layout_margin="10dp"
-            android:text="Calculate"
+            android:text="@string/btn_calculate"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:background="@color/redDark"
@@ -35,4 +128,4 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</ScrollView>

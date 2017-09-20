@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sumCategory1 = 0;
+        sumCategory2 = 0;
+        sumCategory3 = 0;
+
         getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame, new FrontPage()).commit();
     }
 }

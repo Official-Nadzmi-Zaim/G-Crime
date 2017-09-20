@@ -153,6 +153,7 @@ public class Analysis extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.btnBack:
+                finish();
                 break;
         }
     }

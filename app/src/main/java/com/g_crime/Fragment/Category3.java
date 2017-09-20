@@ -43,6 +43,9 @@ public class Category3 extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_category3, container, false);
 
+        sumCategory3 = 0;
+        cat3SecScores = new int[4];
+
         Button btnCalc = (Button) v.findViewById(R.id.btnCalcC3);
         btnCalc.setOnClickListener(this);
 
@@ -52,6 +55,15 @@ public class Category3 extends Fragment implements View.OnClickListener{
         RecyclerView rcSoalan3_4 = (RecyclerView) v.findViewById(R.id.rcSoalan3_4);
 
         //setup soalan dan no soalan
+        listNoSoalan3_1[0] = 1;
+        listNoSoalan3_1[1] = 2;
+        listNoSoalan3_2[0] = 3;
+        listNoSoalan3_3[0] = 4;
+        listNoSoalan3_4[0] = 5;
+        listNoSoalan3_4[1] = 6;
+        listNoSoalan3_4[2] = 7;
+        listNoSoalan3_4[3] = 8;
+
         listSoalan3_1[0] = getString(R.string.cS38);
         listSoalan3_1[1] = getString(R.string.cS39);
         listSoalan3_2[0] = getString(R.string.cS40);
@@ -60,15 +72,6 @@ public class Category3 extends Fragment implements View.OnClickListener{
         listSoalan3_4[1] = getString(R.string.cS43);
         listSoalan3_4[2] = getString(R.string.cS44);
         listSoalan3_4[3] = getString(R.string.cS45);
-
-        listNoSoalan3_1[0] = 38;
-        listNoSoalan3_1[1] = 39;
-        listNoSoalan3_2[0] = 40;
-        listNoSoalan3_3[0] = 41;
-        listNoSoalan3_4[0] = 42;
-        listNoSoalan3_4[1] = 43;
-        listNoSoalan3_4[2] = 44;
-        listNoSoalan3_4[3] = 45;
 
         //setup color
         System.arraycopy(array_3, 0, listColor3_1, 0, listColor3_1.length);
@@ -141,8 +144,6 @@ public class Category3 extends Fragment implements View.OnClickListener{
         super.onDestroyView();
 
         // kira summation of this category
-        sumCategory3 = 0;
-
         for (int score : cat3SecScores)
             sumCategory3 += score;
     }

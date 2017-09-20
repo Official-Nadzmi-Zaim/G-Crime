@@ -59,6 +59,9 @@ public class Category2 extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_category2, container, false);
 
+        sumCategory2 = 0;
+        cat2SecScores = new int[9];
+
         Button btnCalc = (Button) v.findViewById(R.id.btnCalcC2);
         btnCalc.setOnClickListener(this);
 
@@ -73,24 +76,24 @@ public class Category2 extends Fragment implements View.OnClickListener {
         RecyclerView rcSoalan2_9 = (RecyclerView) v.findViewById(R.id.rcSoalan2_9);
 
         //Setup no soalan
-        listNoSoalan2_1[0] = 20;
-        listNoSoalan2_1[1] = 21;
-        listNoSoalan2_1[2] = 22;
-        listNoSoalan2_2[0] = 23;
-        listNoSoalan2_2[1] = 24;
-        listNoSoalan2_3[0] = 25;
-        listNoSoalan2_4[0] = 26;
-        listNoSoalan2_4[1] = 27;
-        listNoSoalan2_5[0] = 28;
-        listNoSoalan2_5[1] = 29;
-        listNoSoalan2_5[2] = 30;
-        listNoSoalan2_6[0] = 31;
-        listNoSoalan2_6[1] = 32;
-        listNoSoalan2_7[0] = 33;
-        listNoSoalan2_8[0] = 34;
-        listNoSoalan2_8[1] = 35;
-        listNoSoalan2_9[0] = 36;
-        listNoSoalan2_9[1] = 37;
+        listNoSoalan2_1[0] = 1;
+        listNoSoalan2_1[1] = 2;
+        listNoSoalan2_1[2] = 3;
+        listNoSoalan2_2[0] = 4;
+        listNoSoalan2_2[1] = 5;
+        listNoSoalan2_3[0] = 6;
+        listNoSoalan2_4[0] = 7;
+        listNoSoalan2_4[1] = 8;
+        listNoSoalan2_5[0] = 9;
+        listNoSoalan2_5[1] = 10;
+        listNoSoalan2_5[2] = 11;
+        listNoSoalan2_6[0] = 12;
+        listNoSoalan2_6[1] = 13;
+        listNoSoalan2_7[0] = 14;
+        listNoSoalan2_8[0] = 15;
+        listNoSoalan2_8[1] = 16;
+        listNoSoalan2_9[0] = 17;
+        listNoSoalan2_9[1] = 18;
 
         //Setup soalan
         listSoalan2_1[0] = getString(R.string.cS20);
@@ -218,8 +221,6 @@ public class Category2 extends Fragment implements View.OnClickListener {
         super.onDestroyView();
 
         // kira summation of this category
-        sumCategory2 = 0;
-
         for (int score : cat2SecScores)
             sumCategory2 += score;
     }
