@@ -35,7 +35,7 @@ public class Result extends Fragment implements View.OnClickListener {
     Button btnFrontPage;
 
     // vars
-    int totalScore, level;
+    int totalScore;
 
     @Nullable
     @Override
@@ -144,10 +144,43 @@ public class Result extends Fragment implements View.OnClickListener {
 
     // process -------------------------------------------------------------------------------------
     private void mainProcess() {
+        int lvLawColor, lvManagementColor, lvEnvironmentColor, level;
+
         // calc total score & determine level
         // value retrieved by each function after calculate
         totalScore = sumCategory1 + sumCategory2 + sumCategory3;
 
+        // category 1 level
+        if(sumCategory1 == 0)
+            lvLawColor = Color.GREEN;
+        else if(sumCategory1 >= 1 && sumCategory1 <= 190)
+            lvLawColor = Color.YELLOW;
+        else if(sumCategory1 >= 191 && sumCategory1 <= 380)
+            lvLawColor = Color.parseColor("#FFAA2A");
+        else
+            lvLawColor = Color.RED;
+
+        // category 2 level
+        if(sumCategory2 == 0)
+            lvManagementColor = Color.GREEN;
+        else if(sumCategory2 >= 1 && sumCategory2 <= 180)
+            lvManagementColor = Color.YELLOW;
+        else if(sumCategory2 >= 181 && sumCategory2 <= 360)
+            lvManagementColor = Color.parseColor("#FFAA2A");
+        else
+            lvManagementColor = Color.RED;
+
+        // category 3 level
+        if(sumCategory3 == 0)
+            lvEnvironmentColor = Color.GREEN;
+        else if(sumCategory3 >= 1 && sumCategory3 <= 80)
+            lvEnvironmentColor = Color.YELLOW;
+        else if(sumCategory3 >= 81 && sumCategory3 <= 160)
+            lvEnvironmentColor = Color.parseColor("#FFAA2A");
+        else
+            lvEnvironmentColor = Color.RED;
+
+        // overall level
         if(totalScore == 0)
             level = Color.GREEN; // green
         else if(totalScore >= 1 && totalScore <= 449)
@@ -166,6 +199,9 @@ public class Result extends Fragment implements View.OnClickListener {
 
         // show level
         ivLevel.setBackgroundColor(level);
+        ivLevelLaw.setBackgroundColor(lvLawColor);
+        ivLevelManagement.setBackgroundColor(lvManagementColor);
+        ivLevelEnvironment.setBackgroundColor(lvEnvironmentColor);
     }
     // ---------------------------------------------------------------------------------------------
 }
