@@ -294,8 +294,7 @@
                             android:id="@+id/ivLevelEnvironment"
                             android:layout_width="100dp"
                             android:layout_height="20dp"
-                            android:background="@color/green"
-                            />
+                            android:background="@color/green" />
 
                     </LinearLayout>
                 </LinearLayout>
